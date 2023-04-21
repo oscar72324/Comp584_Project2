@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="../app.js" defer></script>
+    
+</head>
+<body class="">
+    <div class="flex items-center justify-center flex-col gap-8 w-full relative tracking-wider" style="min-height: 100vh;display: flex;flex-direction: column;justify-content: center;background-image: url('../assets/day.avif');background-size: cover;background-position: left center;color: #fff;">
+        <div class="bg-overlay absolute top-0 left-0 w-full h-full bg-black opacity-60 z-1"></div>
+        <div class="flex items-center justify-center flex-col gap-8 w-full z-10">
+            <label class="text-6xl font-bold text-white p-2 max-md:text-2xl">Search for City</label>
+            <div class="flex w-full items-center justify-center ">
+                <input class="outline-none w-1/3 p-4 rounded-tl-lg rounded-bl-lg text-4xl text-black border-none leading-3 max-md:p-2 max-md:text-2xl max-md:w-1/2" id="search"/>
+                <button id="apiCall" class="border-none p-5 rounded-tr-lg rounded-br-lg text-4xl font-semibold bg-[#2082cc] hover:bg-[#0d578f] tracking-wider max-md:p-2 max-md:text-2xl">Show</button>
+            </div>
+        </div>
+
+        <div id="details" class="flex gap-16 z-10 w-1/2 items-center justify-around max-xl:flex-col">
+            <div class="flex flex-col items-center w-[200px] sm:w-[300px] gap-4">
+                <p id="city-name" class="text-2xl sm:text-4xl font-bold"></p>
+                <h1 id="temperature" class="text-4xl sm:text-8xl font-bold"></h1>
+                <p id="description" class="text-sm sm:text-lg font-semibold uppercase"></p>
+            </div>
+
+            <div class="w-[200px] sm:w-[400px]">
+                <ul class="flex flex-col text-sm sm:text-2xl gap-4 font-semibold uppercase p-0 sm:p-4">
+                    <li class="flex justify-between">
+                        <p id="feels">Feels Like</p>
+                        <p id="feels-temp"></p>
+                    </li>
+                    <li class="flex justify-between">
+                        <p id="wind">Wind</p>
+                        <p id="wind-speed"></p>
+                    </li>
+                    <li class="flex justify-between">
+                        <p id="humid">Humidity</p>
+                        <p id="humid-percent"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
